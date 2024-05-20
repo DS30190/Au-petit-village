@@ -4,17 +4,21 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #f9d0a3;
+    background-color: #F9D0A3  ;
   }
   
   header .logo img {
     height: 100px; /* Adjust as needed */
   }
   
+  .logo img {
+    border-radius: 10px; /* Vous pouvez ajuster cette valeur selon vos préférences */
+}
+
   header nav a {
     margin: 0 10px;
     text-decoration: none;
-    color: #151217;
+    color: #151217 ;
   }
   /* Responsive Design */
 @media (max-width: 768px) {

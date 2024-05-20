@@ -14,7 +14,8 @@ export interface Product {
 })
 export class ProductsService {
   private products: Product[] = [
-    // Sample product data
+    { id: 1, name: 'Figurine Astérix', description: 'Figurine d\'Astérix avec Obélix', price: 15.99, image: './assets/img/asterix.jpeg' },
+    { id: 2, name: 'Figurine Obélix', description: 'Figurine d\'Obélix avec Astérix', price: 15.99, image: './assets/img/obelix.jpeg' },
   ];
 
   getProducts(): Observable<Product[]> {
