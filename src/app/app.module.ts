@@ -10,6 +10,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductsService } from './products.service';
 import { SortByPricePipe } from './sort-by-price.pipe';
 import { FilterByNamePipe } from './filter-by-name.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FilterByNamePipe } from './filter-by-name.pipe';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule  
   ],
   providers: [
     provideClientHydration()

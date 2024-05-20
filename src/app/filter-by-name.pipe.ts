@@ -5,8 +5,13 @@ import { Product } from './products.service';
   name: 'filterByName'
 })
 export class FilterByNamePipe implements PipeTransform {
-  transform(products: Product[], name: string): Product[] {
-    return products.filter(product => product.name.toLowerCase().includes(name.toLowerCase()));
+  transform(products: Product[], searchTerm: string): Product[] {
+    if (!products || products.length === 0 || !searchTerm) {
+      return products;
+    }
+    searchTerm = searchTerm.toLowerCase();
+    return products.filter(product => product.name.toLowerCase().includes(searchTerm));
   }
 }
+
 

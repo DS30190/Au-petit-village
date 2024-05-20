@@ -12,3 +12,8 @@ p {
     margin-top: 50px; /* Ajoute une marge de 50 pixels en haut */
     margin-bottom: 100px; /* Ajoute une marge de 50 pixels en bas */
   }
+  button{
+    background-color: #FDD90B ;
+    margin-right: 10px;
+    margin-top: 20px;
+  }
