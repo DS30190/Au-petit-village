@@ -1,0 +1,32 @@
+/* Header styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f9d0a3;
+  }
+  
+  header .logo img {
+    height: 100px; /* Adjust as needed */
+  }
+  
+  header nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #151217;
+  }
+  /* Responsive Design */
+@media (max-width: 768px) {
+    header {
+      flex-direction: column;
+      text-align: center;
+    }
+    header nav {
+      flex-direction: column;
+    }
+    header nav a {
+      margin: 5px 0;
+    }
+  }
+  
