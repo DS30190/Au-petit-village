@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ProductsService, Product } from '../products.service';
+
 
 @Component({
   selector: 'app-home',
@@ -12,7 +14,8 @@ export class HomeComponent implements OnInit {
   sortDirection: string = 'Asc';
   searchTerm: string = '';
 
-  constructor(private productService: ProductsService) { }
+  constructor(private productService: ProductsService, private router: Router) { }
+
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe(products => {
@@ -34,7 +37,9 @@ export class HomeComponent implements OnInit {
       product.name.toLowerCase().includes(value.toLowerCase())
     );
   }
-  
+  viewDetails(productId: number): void {
+    this.router.navigate(['/product', productId]);
+  } 
 }
 
 
